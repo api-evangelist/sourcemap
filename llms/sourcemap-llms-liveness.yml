@@ -1,0 +1,55 @@
+generated: '2026-08-28'
+method: probed
+source: https://www.sourcemap.com/llms.txt, every link fetched 2026-08-28
+summary: >-
+  Sourcemap publishes a genuine, hand-written llms.txt at the root of its marketing
+  site — one of the few things in this profile aimed squarely at machine readers.
+  Ten of the eleven deep links inside it are dead. The file describes a site
+  information architecture (/solutions/traceability, /solutions/due-diligence,
+  /technology/data-pipeline) that no longer exists; the live site uses different
+  slugs (/technology/transaction-traceability, /solutions/supply-due-diligence,
+  /technology/erp-integration) which all appear in the published sitemap.xml. The
+  llms.txt was evidently written against an older or planned URL scheme and never
+  reconciled against the Framer site that replaced it. An agent following this file
+  as instructed reaches a 404 on 10 of 12 fetches.
+links_total: 13
+links_live: 3
+links_dead: 10
+links:
+- url: https://www.sourcemap.com
+  status: 200
+- url: https://www.sourcemap.com/technology/supply-chain-mapping
+  status: 200
+- url: https://www.sourcemap.com/company/news
+  status: 200
+- url: https://www.sourcemap.com/solutions/sub-supplier-discovery
+  status: 404
+- url: https://www.sourcemap.com/solutions/bom-mapping
+  status: 404
+- url: https://www.sourcemap.com/solutions/traceability
+  status: 404
+- url: https://www.sourcemap.com/solutions/due-diligence
+  status: 404
+- url: https://www.sourcemap.com/technology/data-pipeline
+  status: 404
+- url: https://www.sourcemap.com/solutions/compliance
+  status: 404
+- url: https://www.sourcemap.com/solutions/procurement
+  status: 404
+- url: https://www.sourcemap.com/solutions/manufacturing
+  status: 404
+- url: https://www.sourcemap.com/solutions/agriculture
+  status: 404
+- url: https://www.sourcemap.com/solutions/esg
+  status: 404
+likely_replacements:
+  /solutions/traceability: /technology/transaction-traceability
+  /solutions/due-diligence: /solutions/supply-due-diligence
+  /technology/data-pipeline: /technology/erp-integration
+  /solutions/bom-mapping: /technology/bill-of-materials-n-tier-mapping
+  /solutions/sub-supplier-discovery: /technology/supplier-engagement
+  /solutions/agriculture: /solutions/food-agriculture
+  /solutions/manufacturing: /solutions/automotive-industrial
+provider_action: >-
+  A single edit to llms.txt, reconciling its URLs against the already-correct
+  sitemap.xml, would restore ten machine-facing pages at zero engineering cost.

@@ -1,0 +1,27 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.sourcemap.com/technology/erp-integration + probes of https://api.sourcemap.com (2026-08-28)
+limit_count: 0
+rate_limits: []
+response_headers: []
+exhaustion_status_code: null
+note: >-
+  No rate limits are documented anywhere Sourcemap publishes, and none could be
+  observed. There is no API reference to read, and api.sourcemap.com refuses every
+  anonymous request at the Azure Application Gateway edge with 403 Access Forbidden
+  before any application-layer throttle would be reached, so no X-RateLimit-*,
+  RateLimit-* or Retry-After header could be captured on a live response. An agent
+  integrating with Sourcemap has no published runtime signal for backoff and must
+  obtain limits from its enterprise contract. Honest zero.
+observed_probe:
+  url: https://api.sourcemap.com/
+  status: 403
+  headers_returned:
+  - x-robots-tag
+  - cache-control
+  - expires
+  - pragma
+  - content-length
+  - content-type
+  - server
+  rate_limit_headers_returned: none

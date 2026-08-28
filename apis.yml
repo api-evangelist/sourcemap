@@ -1,23 +1,115 @@
 aid: sourcemap
 name: Sourcemap
-description: 'Sourcemap is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Sourcemap is an enterprise supply chain transparency and due diligence
+  software company, founded at the MIT Media Lab by Leonardo Bonanni and headquartered
+  in New York. Its platform performs n-tier supply chain mapping, automated sub-supplier
+  discovery, bill-of-materials mapping, transaction-level chain-of-custody traceability,
+  supplier watchlist screening and AI document review, so that brands and manufacturers
+  can meet regulatory obligations including the EU Deforestation Regulation (EUDR),
+  the Uyghur Forced Labor Prevention Act (UFLPA), the Corporate Sustainability Due
+  Diligence Directive (CSDDD), CTPAT, conflict minerals rules and Section 232 tariff
+  and customs enforcement. Sourcemap describes a real-time RESTful API and a data
+  pipeline that moves structured data in both directions with SAP, Salesforce Net
+  Zero Cloud, Databricks and the EU TRACES customs portal, but that API is sold and
+  provisioned as part of an enterprise engagement: there is no public developer portal,
+  no published API reference, no pricing page and no machine-readable contract on
+  any Sourcemap host. Customers include Ferrero, Hershey, Woolworths and AG1.'
 url: https://raw.githubusercontent.com/api-evangelist/sourcemap/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-28'
 modified: '2026-08-28'
+image: https://www.sourcemap.com/modules/core/client/img/brand/logo.png
 tags:
 - Company
-apis: []
+- Supply Chain
+- Traceability
+- Supply Chain Transparency
+- Due Diligence
+- Regulatory Compliance
+- ESG
+- Sustainability
+- Risk Management
+- Logistics
+- Manufacturing
+apis:
+- name: Sourcemap Platform API
+  description: 'Sourcemap describes a secure real-time RESTful API used to integrate
+    the traceability platform with ERP and enterprise data stacks (SAP, Salesforce
+    Net Zero Cloud, Databricks) and with customs portals such as EU TRACES. The API
+    host api.sourcemap.com resolves and answers, but every path is refused to an
+    anonymous caller: the Azure Application Gateway edge returns 403 Access Forbidden
+    with x-robots-tag noindex, and the Kong router behind it answers /v1/* with "no
+    Route matched with those values". No OpenAPI, Swagger, GraphQL, AsyncAPI or MCP
+    manifest is published on any Sourcemap host, and there is no public API reference
+    to read. Access is provisioned through an enterprise engagement.'
+  humanURL: https://www.sourcemap.com/technology/erp-integration
+  baseURL: https://api.sourcemap.com
+  tags:
+  - Supply Chain
+  - Traceability
+  - ERP Integration
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/sourcemap-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.sourcemap.com/
+- type: Blog
+  url: https://www.sourcemap.com/blog
+- type: Support
+  url: https://info.sourcemap.com/supplier-support
+- type: TermsOfService
+  url: https://www.sourcemap.com/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.sourcemap.com/privacy-policy
+- type: LLMsTxt
+  url: llms/sourcemap-llms.txt
+- type: Conformance
+  url: conformance/sourcemap-conformance.yml
+- type: Compliance
+  url: conformance/sourcemap-conformance.yml
+- type: Lifecycle
+  url: lifecycle/sourcemap-lifecycle.yml
+- type: StatusPage
+  url: https://status.sourcemap.com/
+- type: Plans
+  url: plans/sourcemap-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/sourcemap-rate-limits.yml
+- type: Packages
+  url: packages/sourcemap-packages.yml
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 10
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Sourcemap markets "a secure real-time RESTful API" on its integrations page, and
+    api.sourcemap.com does resolve to an Azure Application Gateway fronting a Kong
+    router, but every anonymous path is refused with 403 Access Forbidden and
+    x-robots-tag "noindex, nofollow, noarchive" while the 379-URL sitemap contains no
+    developer, docs, reference, or pricing page at all — the only route to the contract
+    is the Request a Demo form.
+  evidence:
+  - url: https://api.sourcemap.com/openapi.json
+    status: 403
+  - url: https://api.sourcemap.com/v1/openapi.json
+    status: 404
+  - url: https://www.sourcemap.com/pricing
+    status: 404
+  - url: https://status.sourcemap.com/
+    status: 401
+  - url: https://www.sourcemap.com/company/request-a-demo
+    status: 200
+  - url: https://www.sourcemap.com/llms.txt
+    status: 200
+  checked: '2026-08-28'

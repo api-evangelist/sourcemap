@@ -1,0 +1,44 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.sourcemap.com/sitemap.xml (379 URLs, none of them developer-facing), https://status.sourcemap.com/
+versioning:
+  scheme: unknown
+  current_version: null
+  note: >-
+    The Kong router behind api.sourcemap.com answers /v1/* with "no Route matched
+    with those values" — a JSON body from the gateway, not from an application — which
+    shows a /v1 path prefix is at least routable. Sourcemap publishes no versioning
+    policy, so the scheme, the support window and the version negotiation mechanism
+    are all unstated.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  rfc8594: unknown
+  note: >-
+    No deprecation policy, no sunset schedule and no migration guide appear anywhere
+    on sourcemap.com. No Deprecation pointer is emitted.
+status_page:
+  url: https://status.sourcemap.com/
+  status: 401
+  public: false
+  provider: uptime.com
+  note: >-
+    Sourcemap does operate a status page — status.sourcemap.com is a CNAME to
+    cname.uptime.com and answers from openresty — but it is closed to the public
+    behind HTTP Basic auth (WWW-Authenticate: Basic realm=""). An unauthenticated
+    caller, human or agent, gets 401 and 16 bytes. A StatusPage pointer IS emitted
+    because the surface genuinely exists and is operated by the provider; readers
+    should note it cannot be consumed without credentials.
+sla:
+  published: false
+  note: >-
+    "an enterprise-grade SLA" is asserted on the integrations page with no numbers.
+    No uptime target, credit schedule, severity matrix or response time is published.
+changelog:
+  published: false
+  note: >-
+    No changelog, release notes or API version history exists on any Sourcemap host.
+    /changelog 404s on www.sourcemap.com and no such URL appears in the sitemap. No
+    ChangeLog pointer is emitted.
+deprecated_operations: []

@@ -1,0 +1,83 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.sourcemap.com/ (certification badges + hero copy), https://www.sourcemap.com/technology/erp-integration
+note: >-
+  Sourcemap publishes no machine-readable contract, so every entry below is graded
+  against PROSE the company publishes on its own marketing site, not against a spec.
+  Where 0.12.0 asks for a domain-standard SIGNATURE inside the contract (a SCIM URN,
+  an OData $metadata surface, an EPCIS/GS1 event shape, an X12/EDIFACT message type),
+  none could be checked at all: api.sourcemap.com refuses every anonymous request
+  with 403 and no OpenAPI, GraphQL SDL or AsyncAPI document exists on any host. Absence
+  of a domain-standard signature here therefore means "not verifiable", not "not present".
+conformance:
+- id: iso-27001
+  name: ISO/IEC 27001 Information Security Management
+  conforms: true
+  verification: first-party-claim
+  evidence: >-
+    Homepage hero states "The only ISO and SOC2 certified secure and ERP
+    integration-ready supply chain mapping software"; a certification badge image
+    named "ISO 27001" is rendered in the trust strip on www.sourcemap.com.
+  source: https://www.sourcemap.com/
+- id: soc-2-type-ii
+  name: SOC 2 Type II
+  conforms: true
+  verification: first-party-claim
+  evidence: >-
+    Homepage trust strip renders a badge whose alt text is "SOC 2 Type II Badge",
+    alongside the hero claim of SOC2 certification. No report, auditor name, audit
+    period or trust-center portal is published, and no gated request flow is offered.
+  source: https://www.sourcemap.com/
+- id: eu-traces
+  name: EU TRACES (TRAde Control and Expert System) Due Diligence Statement filing
+  conforms: true
+  verification: first-party-claim
+  evidence: >-
+    "Due Diligence Statements file directly to EU TRACES through a live API in
+    production since February 2025, at shipment volume, without manual re-keying."
+    This is the closest thing Sourcemap has to a domain-standard integration — a
+    government submission pipeline for EUDR — but it is Sourcemap calling TRACES,
+    not Sourcemap exposing a TRACES-shaped contract to its own customers.
+  source: https://www.sourcemap.com/technology/erp-integration
+- id: rest
+  name: RESTful HTTP interface style
+  conforms: true
+  verification: first-party-claim
+  evidence: >-
+    "Verified sourcing data for Scope 3 accounting and to downstream reporting
+    through the RESTful API." No resource model, method set, media type, status-code
+    convention or error envelope is documented publicly.
+  source: https://www.sourcemap.com/technology/erp-integration
+- id: sso-saml-oidc
+  name: Enterprise single sign-on
+  conforms: true
+  verification: first-party-claim
+  evidence: >-
+    "Single Sign-on, Dedicated Hosting, and an enterprise-grade SLA." The protocol
+    (SAML 2.0 vs OIDC), the identity providers supported and the tenant configuration
+    flow are all unstated; /.well-known/openid-configuration 404s on www.sourcemap.com
+    and 403s on api.sourcemap.com.
+  source: https://www.sourcemap.com/technology/erp-integration
+not_verifiable:
+- id: domain-standard-signature
+  reason: >-
+    No contract published on any host, so no GS1/EPCIS, UN/CEFACT, X12, EDIFACT,
+    OData or SCIM signature could be probed. Recorded as unverifiable rather than absent.
+- id: rfc9457
+  reason: No error catalog or problem+json media type is published.
+- id: oauth2
+  reason: >-
+    No securityScheme is published and /.well-known/oauth-authorization-server is
+    403 on the API host, so the token model behind api.sourcemap.com is unknown.
+- id: idempotency
+  reason: No conventions documentation, header reference or write-surface description is published.
+- id: pagination
+  reason: No API reference is published.
+regulatory_regimes_served:
+- EU Deforestation Regulation (EUDR)
+- Uyghur Forced Labor Prevention Act (UFLPA)
+- Corporate Sustainability Due Diligence Directive (CSDDD)
+- Norway Transparency Act
+- CTPAT
+- Section 232 tariffs / US customs admissibility
+- Conflict minerals (3TG)

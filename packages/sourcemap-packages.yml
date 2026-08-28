@@ -1,0 +1,31 @@
+generated: '2026-08-28'
+method: searched
+source: registry.npmjs.org, pypi.org, and the Sourcemap website (2026-08-28)
+package_count: 0
+packages: []
+note: >-
+  Sourcemap ships no first-party client library on any public registry. The npm
+  package "sourcemap" and the PyPI package "sourcemap" both resolve (HTTP 200) but
+  are unrelated JavaScript source-map tooling by other authors — a name collision,
+  not a Sourcemap Inc SDK — and are deliberately NOT recorded as packages here. No
+  @sourcemap/* npm scope exists (404), no sourcemap-sdk or sourcemap-client exists
+  on npm or PyPI (404), and the Sourcemap website links to no SDK, no client library
+  and no code sample. No SDKs pointer is emitted.
+registries_searched:
+- registry: npm
+  queries:
+  - sourcemap
+  - '@sourcemap/sdk'
+  - sourcemap-sdk
+  - 'search: sourcemap supply chain'
+  first_party_hits: 0
+- registry: pypi
+  queries:
+  - sourcemap
+  - sourcemap-api
+  - sourcemap-client
+  first_party_hits: 0
+name_collision_warning: >-
+  "sourcemap" is a heavily overloaded term in package registries because of the
+  JavaScript Source Map specification. Any future harvest must confirm first-party
+  ownership by repository URL and maintainer, not by package name.

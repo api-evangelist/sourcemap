@@ -1,0 +1,106 @@
+generated: '2026-08-28'
+method: probed
+source: live GET of /.well-known/* on every Sourcemap host (2026-08-28)
+note: >-
+  Nothing was served. Sourcemap publishes no /.well-known document on any host, so
+  no WellKnown or SecurityTxt pointer is emitted in apis.yml — this file records a
+  verified absence, not a presence. The www host (Framer-hosted marketing site)
+  returns a genuine 404 body for every path. The api host (Azure Application Gateway
+  in front of Kong) refuses every anonymous request with 403 Access Forbidden and
+  x-robots-tag "noindex, nofollow, noarchive", so its /.well-known space cannot be
+  read at all rather than being confirmed empty. The legacy open.sourcemap.com host
+  answers 200 to EVERY path with the same 17KB AngularJS single-page-app shell
+  (<!DOCTYPE html>); those 200s are catch-all false positives and are recorded as
+  misses.
+hosts:
+- host: www.sourcemap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: api.sourcemap.com
+  note: every path refused by the edge with 403 Access Forbidden (not confirmed absent)
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    file: null
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+- host: open.sourcemap.com
+  note: >-
+    Legacy "Open Sourcemap" AngularJS environment. Returns HTTP 200 with an identical
+    HTML SPA shell for every path probed, including paths that do not exist. All 200s
+    below are catch-all shells, NOT documents, and are treated as misses.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    body: html-spa-shell
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    body: html-spa-shell
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    body: html-spa-shell
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    body: html-spa-shell
+  - path: /.well-known/api-catalog
+    status: 200
+    file: null
+    body: html-spa-shell
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    body: html-spa-shell
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    body: html-spa-shell
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    body: html-spa-shell

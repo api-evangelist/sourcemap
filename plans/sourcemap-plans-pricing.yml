@@ -1,0 +1,28 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.sourcemap.com/sitemap.xml + https://www.sourcemap.com/ (footer/nav), probed 2026-08-28
+plan_count: 0
+currency: null
+plans: []
+note: >-
+  Sourcemap publishes no pricing of any kind. https://www.sourcemap.com/pricing
+  returns 404 ("Sourcemap | 404 Error"), and none of the 379 URLs in the published
+  sitemap is a pricing, plans, packaging or tier page. There is no self-serve tier,
+  no free trial and no published unit of consumption. The only commercial entry point
+  is https://www.sourcemap.com/company/request-a-demo (HTTP 200), a sales-qualification
+  form. This is an honest zero, recorded rather than omitted: the enterprise sales
+  gate IS the pricing model, and a buyer or an agent cannot obtain a number without
+  talking to a person.
+commercial_entry_points:
+- name: Request a Demo
+  url: https://www.sourcemap.com/company/request-a-demo
+  status: 200
+  type: sales-gate
+- name: Contact Us
+  url: https://www.sourcemap.com/company/contact-us
+  status: 200
+  type: sales-gate
+- name: Partner With Us
+  url: https://www.sourcemap.com/partner
+  status: 200
+  type: sales-gate

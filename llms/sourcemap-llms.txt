@@ -1,0 +1,28 @@
+﻿# Sourcemap
+
+> Sourcemap is the leading provider of supply chain mapping, traceability, and digital transparency solutions. Enterprises use Sourcemap to discover sub-suppliers, verify transaction-level data, ensure compliance with global trade regulations (like forced labor and deforestation laws), and manage ESG risks across end-to-end multi-tier supply chains.
+
+Sourcemap features the world's largest supplier network built on authentic data, allowing companies to expand their supply chain visibility by 10-20x within days. It is trusted by global brands, automotive OEMs, semiconductor and solar manufacturers, and major consumer goods companies like Ferrero and Hershey.
+
+## What Sourcemap does
+
+- [Sourcemap Homepage](https://www.sourcemap.com): Overview of Sourcemap's trusted network for supply chain mapping, traceability, and global due diligence.
+- [Supply Chain Mapping](https://www.sourcemap.com/technology/supply-chain-mapping): Central portal that enables multi-tier supplier facilities to quickly and accurately share location and traceability data using standard formats.
+- [Automated Sub-Supplier Discovery](https://www.sourcemap.com/solutions/sub-supplier-discovery): Leverage a cascading supplier portal to automatically discover and map N-tier sub-suppliers within hours.
+- [Bill of Materials N-Tier Mapping](https://www.sourcemap.com/solutions/bom-mapping): Software to verify company-specific materials, parts, and processes at the site level with zero false positives.
+- [Transaction-Level Traceability](https://www.sourcemap.com/solutions/traceability): Track chain of custody and assemble audit-ready documentation for customs compliance, Section 232 tariffs, and import enforcement.
+- [Supplier Watchlist Monitoring & Due Diligence](https://www.sourcemap.com/solutions/due-diligence): Screen suppliers against 80,000+ entities for legality, forced labor risk, and environmental compliance using geographic and linguistic AI matching.
+- [Data Pipeline & API Integration](https://www.sourcemap.com/technology/data-pipeline): Secure real-time API integrations with ERPs and enterprise tech stacks like SAP, Salesforce Net Zero Cloud, Databricks, and customs portals like E.U. TRACES.
+
+## Who Sourcemap is for
+
+- [For Compliance Teams](https://www.sourcemap.com/solutions/compliance): Help compliance officers meet forced labor prevention laws, Uyghur Forced Labor Prevention Act (UFLPA) guidelines, and EU Deforestation Regulation (EUDR) mandates.
+- [For Procurement & Sourcing](https://www.sourcemap.com/solutions/procurement): Tools for procurement leaders to validate supplier records, streamline multi-tier operations, and bring long-tail visibility under standard corporate risk controls.
+- [For Manufacturing & OEMs](https://www.sourcemap.com/solutions/manufacturing): Custom solutions tailored for high-risk, complex supply chains including automotive OEMs, semiconductors, solar manufacturing, and heavy infrastructure.
+- [For Food & Agriculture](https://www.sourcemap.com/solutions/agriculture): Supplier-verified farm polygon data and legality assessments for high-impact commodities like cocoa, palm oil, and hazelnuts.
+- [For Sustainability & ESG Leaders](https://www.sourcemap.com/solutions/esg): Software to eliminate greenwashing, measure scope 3 impacts, map carbon/environmental footprints, and guarantee responsible sourcing.
+
+## About Sourcemap
+
+- [News & Insights](https://www.sourcemap.com/company/news): The latest industry reports, case studies, regulatory policy updates, and corporate announcements.
+- [LinkedIn](https://www.linkedin.com/company/sourcemap/): Sourcemap on LinkedIn for company culture updates and transparency network expansions.
